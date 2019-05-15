@@ -2,7 +2,7 @@
 source ~/.common_profile
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/WilliamLee/.oh-my-zsh"
+export ZSH="${HOME}/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -68,11 +68,11 @@ ZSH_CUSTOM=${HOME}/.omz_config
 # Add wisely, as too many plugins slow down shell startup.
 
 plugins=(
-    git 
-    brew 
-    osx 
-    pip 
-    django 
+    git
+    brew
+    osx
+    pip
+    django
     z
     zsh-syntax-highlighting
     zsh-autosuggestions
@@ -106,7 +106,7 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 
 # Hide username and host if logged in as the default user
-DEFAULT_USER="WilliamLee"
+DEFAULT_USER=$(whoami)
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
     prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
