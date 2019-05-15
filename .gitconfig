@@ -1,0 +1,14 @@
+[user]
+	name = Yuhang Li
+	email = 18326007+WilliamYuhangLee@users.noreply.github.com
+[core]
+	autocrlf = input
+[credential]
+	helper = cache
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[rebase]
+	autosquash = true
