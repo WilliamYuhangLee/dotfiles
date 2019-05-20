@@ -10,14 +10,6 @@ alias xcode='open -a Xcode '
 
 ## Folder Aliases
 alias omz="cd ${HOME}/.oh-my-zsh"
-alias aad='cd ${HOME}/Study/GT/Courses/VIP/AAD'
-alias commentaria='cd ${HOME}/Documents/PyCharmProjects/Commentaria'
-alias cs2200='cd ${HOME}/Study/GT/Courses/CS2200'
-alias cs3600='cd ${HOME}/Study/GT/Courses/CS3600'
-alias vip='cd ${HOME}/Study/GT/Courses/VIP'
-alias cs4400="cd ${HOME}/Study/GT/Courses/CS4400"
-alias screeps="cd ${HOME}/Library/Application Support/Screeps/scripts/screeps.com/default"
-alias epi="cd ${HOME}/Personal/CS/EPI "
 
 ## Local Aliases
 source ${HOME}/.local_profile
@@ -25,46 +17,19 @@ source ${HOME}/.local_profile
 ## Functions
 
 # Edit and load ~/.common_profile
-pref () {
-    nano ~/.common_profile
-    source ~/.common_profile
+comprof () {
+    nano ${HOME}/.common_profile
+    source ${HOME}/.common_profile
+}
+
+# Edit and load ~/.local_profile
+loprof () {
+    nano ${HOME}/.local_profile
+    source ${HOME}/.local_profile
 }
 
 # Move and create a symlink for a file
 mvln () {
     mv $1 $2
     ln -s $2 $1
-}
-
-# CS2200 shortcut for assembling a file
-rama () {
-    local CLEAN=false
-    local ISA=rama2200
-    local OPTIONS=""
-    OPTIND=1
-    while getopts "chi:s" option; do
-        case $option in
-            c)
-                CLEAN=true
-                ;;
-            h)
-                OPTIONS+="--hex "
-                ;;
-            i)
-                ISA=$OPTARG
-                ;;
-            s)
-                OPTIONS+="--sym "
-                ;;
-        esac
-    done
-    shift $((OPTIND - 1))
-    OPTIND=1
-    if [ $CLEAN == "true" ]; then
-        rm -f $1.bin
-        rm -f $1.sym
-        rm -f $1.hex
-        return
-    fi
-    python3 assembler.py -i $ISA $OPTIONS $1.s
 }
