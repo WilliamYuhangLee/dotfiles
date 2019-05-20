@@ -76,6 +76,8 @@ plugins=(
     z
     zsh-syntax-highlighting
     zsh-autosuggestions
+    knife
+    kitchen
 )
 
 source $ZSH/oh-my-zsh.sh
