@@ -4,6 +4,10 @@ PATH="${HOME}/bin:${PATH}"
 # /usr/local/sbin
 PATH="/usr/local/sbin:${PATH}"
 
+## Command Shortcuts
+alias python='python3'
+alias xcode='open -a Xcode '
+
 ## Folder Aliases
 alias omz="cd ${HOME}/.oh-my-zsh"
 alias aad='cd ${HOME}/Study/GT/Courses/VIP/AAD'
@@ -15,9 +19,8 @@ alias cs4400="cd ${HOME}/Study/GT/Courses/CS4400"
 alias screeps="cd ${HOME}/Library/Application Support/Screeps/scripts/screeps.com/default"
 alias epi="cd ${HOME}/Personal/CS/EPI "
 
-## Command Shortcuts
-alias python='python3'
-alias xcode='open -a Xcode '
+## Local Aliases
+source ${HOME}/.local_profile
 
 ## Functions
 
