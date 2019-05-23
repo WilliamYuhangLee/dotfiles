@@ -23,7 +23,7 @@ comprof () {
 }
 
 # Edit and load ~/.local_profile
-loprof () {
+locprof () {
     nano ${HOME}/.local_profile
     source ${HOME}/.local_profile
 }
