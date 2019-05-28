@@ -1,6 +1,8 @@
 [user]
 	name = Yuhang Li
 	email = 18326007+WilliamYuhangLee@users.noreply.github.com
+[includeIf "gitdir:~/Work/"]
+    path = ~/Work/.gitconfig
 [core]
 	autocrlf = input
 [credential]
