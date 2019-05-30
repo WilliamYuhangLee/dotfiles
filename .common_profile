@@ -11,6 +11,9 @@ alias xcode='open -a Xcode '
 # Open up a Markdown file in browser in GitHub Markdown style
 alias grip='grip -b --quiet'
 
+# Open up browser to list zsh git plugin aliases
+alias gitaliases='grip ~/.oh-my-zsh/plugins/git/README.md'
+
 ## Folder Aliases
 alias omz="cd ${HOME}/.oh-my-zsh"
 
