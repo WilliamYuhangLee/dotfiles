@@ -8,6 +8,9 @@ PATH="/usr/local/sbin:${PATH}"
 alias python='python3'
 alias xcode='open -a Xcode '
 
+# Open up a Markdown file in browser in GitHub Markdown style
+alias grip='grip -b --quiet'
+
 ## Folder Aliases
 alias omz="cd ${HOME}/.oh-my-zsh"
 
