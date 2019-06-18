@@ -3,6 +3,8 @@
 PATH="${HOME}/bin:${PATH}"
 # /usr/local/sbin
 PATH="/usr/local/sbin:${PATH}"
+# /usr/local/opt/grep/libexec/gnubin
+PATH="/usr/local/opt/grep/libexec/gnubin:${PATH}"
 
 ## Command Shortcuts
 alias python='python3'
