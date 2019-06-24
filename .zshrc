@@ -1,6 +1,3 @@
-# Load common profile for shells
-source ~/.common_profile
-
 # Path to your oh-my-zsh installation.
 export ZSH="${HOME}/.oh-my-zsh"
 
@@ -114,3 +111,6 @@ prompt_context() {
     prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
   fi
 }
+
+# Load common profile for shells
+source ~/.common_profile
