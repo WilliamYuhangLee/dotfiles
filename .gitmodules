@@ -1,10 +1,10 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
+	branch = master
 [submodule ".omz_config/plugins/zsh-autosuggestions"]
 	path = .omz_config/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
 [submodule ".omz_config/plugins/zsh-syntax-highlighting"]
 	path = .omz_config/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-
