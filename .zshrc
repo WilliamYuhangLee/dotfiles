@@ -56,7 +56,7 @@ ZSH_THEME="agnoster"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=${HOME}/.omz_config
+# ZSH_CUSTOM=${HOME}/SOME_FOLDER
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -110,6 +110,12 @@ prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
     prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
   fi
+}
+
+# Edit and load ~/.zshrc
+zr () {
+    nano ${HOME}/.zshrc
+    source ${HOME}/.zshrc
 }
 
 # Load common profile for shells
