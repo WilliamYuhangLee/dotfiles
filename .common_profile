@@ -7,7 +7,6 @@ PATH="/usr/local/sbin:${PATH}"
 PATH="/usr/local/opt/grep/libexec/gnubin:${PATH}"
 
 ## Command Shortcuts
-alias python='python3'
 alias xcode='open -a Xcode '
 
 # Open up a Markdown file in browser in GitHub Markdown style
