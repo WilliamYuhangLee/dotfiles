@@ -17,6 +17,9 @@ ZSH_THEME="agnoster"
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
+# Fix permission issues to access completion-dependent directories ( /usr/local/share/zsh and /usr/local/share/zsh/site-functions )
+ZSH_DISABLE_COMPFIX=true
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
