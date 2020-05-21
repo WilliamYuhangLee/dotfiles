@@ -50,9 +50,14 @@ if ! [ -x "$(command -v yadm)" ]; then
   yadm clone $dotfile_repo
 fi
 
-## Restore .zshrc if it is dirty (overwritten by OMZ)
+## Recover dotfile setups before continuing
+# Restore .zshrc if it is dirty (overwritten by OMZ)
 if [ "$zshrc_dirty" = true ]; then
   yadm checkout $HOME/.zshrc
+fi
+# Create .local_profile if not existed
+if ! [ -f "$HOME/.local_profile" ]; then
+  touch "$HOME/.local_profile"
 fi
 
 ## Install iTerm2
@@ -67,7 +72,7 @@ fi
 ## Configure iTerm2
 # Download and install Powerline fonts if haven't
 font_dir="$HOME/Library/Fonts"
-if [ ! -f "$font_dir/.powerline_installed" ]; then
+if ! [ -f "$font_dir/.powerline_installed" ]; then
   echo 'Warning: Powerline fonts are not installed. (these fonts are required by your iTerm2 profile)'
   echo 'Installing Powerline fonts now...'
   # clone
