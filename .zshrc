@@ -136,6 +136,7 @@ unset __conda_setup
 # Pyenv setup
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
 fi
 
 # Zsh functions
