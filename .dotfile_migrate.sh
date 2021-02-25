@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 ## Install Homebrew
 if ! [ -x "$(command -v brew)" ]; then
   echo 'Warning: Homebrew is not installed.'
@@ -65,7 +67,7 @@ fi
 if ! [ -x "$(whichapp iterm2)" ]; then
   echo 'Warning: iTerm2 is not installed.'
   echo 'Installing iTerm2 now...'
-  brew cask install iterm2
+  brew install --cask iterm2
   echo 'iTerm2 is installed by Homebrew Cask.'
 fi
 
@@ -94,7 +96,7 @@ iterm_config_dir="$HOME/.config/iterm"
 iterm_profile_dir="$HOME/Library/Application Support/iTerm2/DynamicProfiles"
 if [ ! -f "$iterm_profile_dir/$profile_name" -o "$iterm_config_dir/$profile_name" -nt "$iterm_profile_dir/$profile_name" ]; then
   echo "Warning: The iTerm2 profile [$profile_name] has a newer version in $iterm_config_dir"
-  read -k 1 -r -s "?Do you want to overwrite the profile with the newer version? [y/n] "
+  read -q "REPLY?Do you want to overwrite the profile with the newer version? [y/n] "
   echo
   if [[ $REPLY =~ ^[Yy]$ ]]; then
     cp "$iterm_config_dir/$profile_name" "$iterm_profile_dir/$profile_name"
