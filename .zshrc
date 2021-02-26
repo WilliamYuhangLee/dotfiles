@@ -51,7 +51,7 @@ ZSH_DISABLE_COMPFIX=true
 # Uncomment the following line to display red dots whilst waiting for completion.
 # Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
 # See https://github.com/ohmyzsh/ohmyzsh/issues/5765
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -174,6 +174,6 @@ whichapp () {
   # Warn about /Volumes/... paths, because applications launched from mounted
   # devices aren't persistently installed.
   if [[ $fullPath == /Volumes/* ]]; then
-    echo "NOTE: Application is not persistently installed, due to being located on a mounted volume." >&2 
+    echo "NOTE: Application is not persistently installed, due to being located on a mounted volume." >&2
   fi
 }
