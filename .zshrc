@@ -78,9 +78,8 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
     git
     brew
-    osx
+    macos
     pip
-    django
     z
     zsh-syntax-highlighting
     zsh-autosuggestions
