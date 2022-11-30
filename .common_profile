@@ -5,15 +5,23 @@ PATH="${HOME}/bin:${PATH}"
 PATH="/usr/local/sbin:${PATH}"
 # /usr/local/opt/grep/libexec/gnubin
 PATH="/usr/local/opt/grep/libexec/gnubin:${PATH}"
+# pyenv
+PATH="$(pyenv root)/shims:$PATH"
+
+export PATH
 
 ## Command Shortcuts
 alias xcode='open -a Xcode '
+alias timeout=gtimeout
 
 # Open up a Markdown file in browser in GitHub Markdown style
 alias grip='grip -b --quiet'
 
 # Open up browser to list zsh git plugin aliases
 alias gitaliases='grip ~/.oh-my-zsh/plugins/git/README.md'
+
+# Open a new VLC instance
+alias vlc='open -n /Applications/VLC.app/Contents/MacOS/VLC' 
 
 ## Folder Aliases
 alias omz="cd ${HOME}/.oh-my-zsh"
