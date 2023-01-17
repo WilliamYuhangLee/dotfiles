@@ -83,8 +83,8 @@ plugins=(
     z
     zsh-syntax-highlighting
     zsh-autosuggestions
-    knife
-    kitchen
+    fast-syntax-highlighting
+    zsh-autocomplete
 )
 
 source $ZSH/oh-my-zsh.sh
